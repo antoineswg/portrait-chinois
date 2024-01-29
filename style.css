@@ -1,0 +1,406 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*appels des polices d'écriture*/
+@font-face {
+    font-family: 'bagel';
+    src: url('fonts/BagelFatOne-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fredoka';
+    src: url('fonts/fredoka-one.one-regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira';
+    src: url('fonts/FiraSans-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Paramètres généraux*/
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at center center, #202020, #202020), repeating-radial-gradient(circle at center center, #101010, #101010, 20px, transparent 40px, transparent 50px);
+    background-blend-mode: multiply;
+    margin: 0;
+}
+
+section {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 2rem;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    -moz-scroll-snap-align: start;
+    -moz-scroll-snap-stop: always;
+}
+
+/*Page de garde*/
+h1 {
+    color: #ffffa7;
+    font-family: 'bagel', system-ui;
+    font-size: 5rem;
+    text-shadow: #202020 0.25px 0px 8px;
+
+}
+
+header h3 {
+    font-family: 'fredoka', system-ui;
+    color: #fffce3;
+    font-size: 3rem;
+    text-align: center;
+}
+
+header h3:hover {
+    font-size: 4rem;
+    text-align: center;
+    transform: translateY(-0.5rem);
+    transition: all 0.8s ease;
+}
+
+header h3:not(:hover) {
+    font-size: 3rem;
+    transform: translateY(+0.5rem);
+    transition: all 0.8s ease;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.star {
+    color: #ffffa7;
+}
+
+.deco1 {
+    position: fixed;
+    width: 7vw;
+    height: 7vw;
+    top: 12vh;
+    left: 11vw;
+    z-index: -1;
+}
+
+.deco2 {
+    position: fixed;
+    width: 9vw;
+    height: 9vw;
+    bottom: 10vh;
+    left: 30vw;
+    z-index: -1;
+}
+
+.deco3 {
+    position: fixed;
+    width: 9vw;
+    height: 9vw;
+    top: 10vh;
+    right: 35vw;
+    z-index: -1;
+}
+
+.deco4 {
+    position: fixed;
+    width: 7vw;
+    height: 7vw;
+    bottom: 10vh;
+    right: 11vw;
+    z-index: -1;
+}
+
+
+/*Blocs*/
+.category {
+    background: linear-gradient(135deg, rgb(255, 255, 167, 0.15), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 2px solid #ffffa7;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 1vw;
+    width: 80%;
+}
+
+.odd {
+    float: left;
+}
+
+.even {
+    float: right;
+}
+
+#illustration {
+    width: 50%;
+    height: 50vh;
+    max-width: 500px;
+    max-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+    border-radius: 5vw;
+    padding: 1rem;
+    z-index: 1;
+}
+
+#intitule {
+    color: #ffffa7;
+    font-family: 'Bagel Fat One', system-ui;
+    font-size: 2rem;
+    text-shadow: #202020 0.25px 0px 8px;
+}
+
+.analogie {
+    font-family: 'fredoka', system-ui;
+    color: #ffffa7;
+    font-size: 2.5rem;
+    text-shadow: #202020 0.25px 0px 8px;
+}
+
+.justification {
+    font-family: 'fira', system-ui;
+    color: #fffce3;
+    font-size: 1.25rem;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+
+
+/*Bouton scroll*/
+.topScroll {
+    background-color: transparent;
+    border: none;
+    width: 3vw;
+    height: 3vw;
+    position: fixed;
+    bottom: 4vh;
+    right: 2.64vw;
+    z-index: 420;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+    border-radius: 1vw;
+}
+
+.topScroll:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 167, 0.15), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #ffffa7;
+    cursor: pointer;
+    width: 3.5vw;
+    height: 3.5vw;
+    bottom: 3.75vh;
+    right: 2.39vw;
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*Barre de navigation*/
+#navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+
+#navbar ul {
+    list-style: none;
+    margin-bottom: 40px;
+    padding: 0;
+    text-align: center;
+    font-family: 'fira',system-ui;
+    font-size: 2rem;
+}
+
+#navbar li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #fffce3;
+}
+#navbar a:hover {
+    color: #ffffa7;
+    font-size: 3rem;
+    transition: all 0.3s ease;
+}#navbar a:not(:hover) {
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+/*Formulaire*/
+form {
+    width: 45%;
+    min-width: 300px;
+    text-align: center;
+}
+
+.legend {
+    color: #ffffa7;
+    font-family: 'bagel', system-ui;
+    font-size: 3rem;
+    margin-top: 5px;
+    text-shadow: #202020 0.25px 0px 8px;
+}
+
+fieldset {
+    background: linear-gradient(135deg, rgb(255, 255, 167, 0.15), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 50px;
+    border: 2px solid #ffffa7;
+    padding: none;
+}
+
+label {
+    color: #fffce3;
+    font-family: 'fredoka', system-ui;
+    font-size: 1.5rem;
+    text-shadow: #202020 0.25px 0px 8px;
+}
+
+.mandatory {
+    color: #ffffa7;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height: 40px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #202020;
+    border: none;
+    text-align: center;
+    color: #fffce3;
+    font-size: 1rem;
+    font-family: 'fira',system-ui;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid hotpink ;
+}
+
+textarea {
+    max-height: 250px;
+    min-height: 40px;
+    max-width: 50%;
+    min-width: 50%;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #fffce35e;
+}
+
+#send:hover {
+    height: 50px;
+    width: 55%;
+    transition: all 0.3s ease;
+    color: #ffffa7;
+    font-size: 1.25rem;
+    border: solid #ffffa7 2px;
+}
+
+#send:not(:hover) {
+    height: 40px;
+    width: 50%;
+    transition: all 0.3s ease;
+    border: none;
+}
+#formOk{
+    color: #fffce3;
+    font-family: 'fira',system-ui;
+}
+
+
+/*Mentions légales*/
+footer {
+    text-align: center;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.basPage {
+    background-color: #202020;
+    overflow: hidden;
+    cursor: pointer;
+    color: #fffce3;
+    z-index: 60;
+    font-family: 'fira',system-ui;
+}
+
+.invis {
+    height: 4em;
+    color: white;
+    margin: 0;
+}
+
+.vis {
+    height: 37em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer a {
+    color: #ffffa7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:active {
+    color: #b8b866;
+}
+h2{
+    font-family: 'bagel',system-ui;
+    color: #ffffa7;
+}
+footer h3{
+    font-family: 'fredoka',system-ui;
+    font-size: 1.25rem;
+}

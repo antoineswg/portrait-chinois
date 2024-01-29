@@ -1,0 +1,51 @@
+[
+    {
+        "id": " movie",
+        "ana": "un film",
+        "valAna": "Princesse Mononoke",
+        "exp": "Ce film aborde des thèmes tels que la coexistence entre la nature et l'humanité ou les problèmes liés à un monde en évolution. Il n'y a par ailleurs pas de méchant mais uniquement des camps défendant leurs convictions.",
+        "image": "movie.jpg"
+    },
+    {
+        "id": " color",
+        "ana": "une couleur",
+        "valAna": "le jaune",
+        "exp": "A mes yeux, cette couleur représente la gaieté, la joie ainsi que le soleil d'été et sa chaleur. Elle est signe d'espoir et promesse de temps meilleurs.",
+        "image": "color.jpg"
+    },
+    {
+        "id": " hero",
+        "ana": "un super-héros",
+        "valAna": "Spider-Man",
+        "exp": "Surement le héro le plus emblématique, même lorsqu'il est confronté à des situations difficiles il sait adopter une attitude positive. Les derniers mots de l'oncle Ben ''Un grand pouvoir implique de grandes responsabilités.'' expriment parfaitement l'importance de prendre conscience de l'impact de nos actions sur ce qui nous entoure.",
+        "image": "hero.jpg"
+    },
+    {
+        "id": " season",
+        "ana": "une saison",
+        "valAna": "le printemps",
+        "exp": "Le printemps est signe de renaissance, les animaux sortent de leur hibernation et la flore renaît pour un nouveau cycle. Il symbolise également la diversité de la beauté grâce à toutes ses couleurs éclatantes.",
+        "image": "season.jpg"
+    },
+    {
+        "id": " song",
+        "ana": "une musique",
+        "valAna": "Fou du roi par Angsty Camboyz Revenge",
+        "exp": "En créant Angsty Camboyz Revenge, wasting shit et err walou incarnent une volonté de se séparer des grandes institutions, idée que je partage et qui semble se développer de plus en plus parmi les personnes de notre génération. Ce son produit de A à Z par les deux artistes en est un bel exemple. <br><iframe style='border-radius:12px' src='https://open.spotify.com/embed/track/05gjrxRm0hd3jhVzHfUzQi?utm_source=generator&theme=1' width='40%' height='152' frameBorder='0' allow='autoplay'; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>",
+        "image": "song.jpg"
+    },
+    {
+        "id": "n animal",
+        "ana": "un animal",
+        "valAna": "un hibou",
+        "exp": "Il s'agit d'un animal nocturne, caractéristique que l'on partage à un certain niveau. Il représente également l'indépendance et la liberté, de plus j'apprécie particulièrement son allure.",
+        "image": "animal.jpg"
+    },
+    {
+        "id": " character",
+        "ana": "un personnage de fiction",
+        "valAna": "Ghost Dog",
+        "exp": "Le personnage principal du film éponyme par Jim Jarmusch suit un code moral très strict et est en quête d'identité et de sens de sa vie. De plus, il s'agit d'un personnage qui reste volontairement en marge de la société. C'est une personnalité dans laquelle je me retrouve.",
+        "image": "character.jpg"
+    }
+]
